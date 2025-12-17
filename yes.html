@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConnectPlus | Mobile Phone Services</title>
+    <title>Service Schimb Baterii iPhone</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,114 +13,62 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        :root {
-            --primary: #2d5be3;
-            --primary-dark: #1a49c4;
-            --secondary: #ff6b35;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --gray: #6c757d;
-            --light-gray: #e9ecef;
-        }
-
         body {
+            background-color: #f8f9fa;
+            color: #333;
             line-height: 1.6;
-            color: var(--dark);
-            background-color: #fff;
         }
 
         .container {
-            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
 
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-secondary {
-            background-color: var(--secondary);
-        }
-
-        .btn-secondary:hover {
-            background-color: #e55a2b;
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        /* Header & Navigation */
+        /* Header Styles */
         header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
-        .logo span {
-            color: var(--secondary);
+        .logo i {
+            color: #FF9500;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
         }
 
         .nav-links {
@@ -130,663 +77,594 @@
         }
 
         .nav-links li {
-            margin-left: 30px;
+            margin-left: 2rem;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--dark);
+            color: #333;
             font-weight: 600;
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: #007AFF;
         }
 
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            color: var(--dark);
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding-top: 150px;
-            background: linear-gradient(135deg, #f5f7ff 0%, #e9edff 100%);
-            overflow: hidden;
-        }
-
-        .hero-content {
-            display: flex;
+        .contact-header {
+            background-color: #34C759;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
             align-items: center;
-            justify-content: space-between;
         }
 
-        .hero-text {
-            flex: 1;
-            padding-right: 30px;
+        .contact-header i {
+            margin-right: 8px;
         }
 
-        .hero-text h1 {
-            font-size: 3.2rem;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .hero-text p {
-            font-size: 1.1rem;
-            color: var(--gray);
-            margin-bottom: 30px;
-        }
-
-        .hero-image {
-            flex: 1;
+        /* Main Content */
+        .hero {
+            padding: 4rem 0;
             text-align: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Features Section */
-        .features {
-            background-color: var(--light);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
+            background-color: #fff;
+            margin: 2rem 0;
+            border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
         }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
+        .hero h2 {
+            color: #007AFF;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
         }
 
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 20px;
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            color: #666;
         }
 
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        /* Plans Section */
-        .plans-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .plan-card {
-            background-color: white;
+        .highlight {
+            background-color: #FFEECC;
+            padding: 1.5rem;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
+            border-left: 5px solid #FF9500;
+            margin: 2rem 0;
         }
 
-        .plan-card:hover {
-            transform: translateY(-10px);
+        .highlight h3 {
+            color: #FF9500;
+            margin-bottom: 0.5rem;
         }
 
-        .plan-header {
-            background-color: var(--primary);
-            color: white;
-            padding: 30px;
+        /* Pricing Section */
+        .pricing-section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
             text-align: center;
+            margin-bottom: 3rem;
+            color: #007AFF;
+            font-size: 2rem;
         }
 
-        .plan-header h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
-        .plan-price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .plan-period {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        .plan-popular {
-            position: absolute;
-            background-color: var(--secondary);
-            color: white;
-            padding: 5px 20px;
-            font-size: 0.9rem;
+        .filter-btn {
+            padding: 0.8rem 1.8rem;
+            border: 2px solid #007AFF;
+            background: white;
+            color: #007AFF;
+            border-radius: 50px;
+            cursor: pointer;
             font-weight: 600;
-            transform: rotate(45deg);
-            top: 20px;
-            right: -30px;
-            width: 150px;
-            text-align: center;
+            transition: all 0.3s;
         }
 
-        .plan-card.popular {
+        .filter-btn.active, .filter-btn:hover {
+            background: #007AFF;
+            color: white;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto 2rem;
             position: relative;
-            overflow: visible;
         }
 
-        .plan-features {
-            padding: 30px;
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
         }
 
-        .plan-features ul {
-            list-style: none;
-            margin-bottom: 30px;
+        .search-box input:focus {
+            outline: none;
+            border-color: #007AFF;
         }
 
-        .plan-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--light-gray);
+        .search-box i {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
         }
 
-        .plan-features li i {
-            color: var(--primary);
-            margin-right: 10px;
+        /* Pricing Table */
+        .pricing-table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 3rem;
         }
 
-        .plan-button {
-            text-align: center;
-            padding: 0 30px 30px;
+        .table-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            background: #007AFF;
+            color: white;
+            font-weight: bold;
+            padding: 1.2rem 1.5rem;
         }
 
-        /* Services Section */
-        .services {
-            background-color: var(--light);
+        .table-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid #eee;
+            align-items: center;
         }
 
-        .services-grid {
+        .table-row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .table-row:hover {
+            background-color: #f0f7ff;
+        }
+
+        .model-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .price {
+            font-weight: 700;
+            color: #34C759;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .badge.fix {
+            background-color: #E3F2FD;
+            color: #007AFF;
+        }
+
+        .badge.service {
+            background-color: #E8F5E9;
+            color: #34C759;
+        }
+
+        /* Info Sections */
+        .info-section {
+            padding: 3rem 0;
+        }
+
+        .info-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .service-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .service-image {
-            height: 200px;
-            overflow: hidden;
+        .info-card h3 {
+            color: #007AFF;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .service-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+        .info-card.fix h3 {
+            color: #FF9500;
         }
 
-        .service-card:hover .service-image img {
-            transform: scale(1.05);
-        }
-
-        .service-content {
-            padding: 25px;
-        }
-
-        .service-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+        .info-card.service h3 {
+            color: #34C759;
         }
 
         /* Footer */
         footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 70px 0 30px;
+            background-color: #1C1C1E;
+            color: #fff;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .footer-column h3 {
+        .footer-section h3 {
+            color: #FF9500;
+            margin-bottom: 1.5rem;
             font-size: 1.3rem;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
         }
 
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--secondary);
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-column ul li a {
-            color: #bbb;
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            margin-bottom: 0.8rem;
+            display: block;
             text-decoration: none;
-            transition: color 0.3s;
         }
 
-        .footer-column ul li a:hover {
-            color: white;
+        .footer-section a:hover {
+            color: #FF9500;
         }
 
-        .footer-bottom {
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: #FF9500;
+            width: 20px;
+        }
+
+        .copyright {
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #444;
-            color: #bbb;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #888;
             font-size: 0.9rem;
         }
 
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero-content {
-                flex-direction: column;
-            }
-            
-            .hero-text {
-                padding-right: 0;
-                text-align: center;
-                margin-bottom: 50px;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.8rem;
-            }
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
+            .nav-container {
+                flex-direction: column;
             }
             
             .nav-links {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 100%;
-                flex-direction: column;
-                background-color: white;
-                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-                padding: 30px;
-                transition: left 0.3s ease;
-            }
-            
-            .nav-links.active {
-                left: 0;
+                margin-top: 1rem;
             }
             
             .nav-links li {
-                margin: 0 0 20px 0;
+                margin: 0 0.5rem;
             }
             
-            .hero-text h1 {
-                font-size: 2.3rem;
+            .table-header, .table-row {
+                grid-template-columns: 1fr;
+                padding: 1rem;
             }
             
-            .section-title h2 {
+            .table-header div:not(:first-child),
+            .table-row div:not(:first-child) {
+                margin-top: 0.5rem;
+            }
+            
+            h1 {
                 font-size: 2rem;
             }
-        }
-
-        @media (max-width: 576px) {
-            section {
-                padding: 60px 0;
-            }
             
-            .hero {
-                padding-top: 130px;
-            }
-            
-            .hero-text h1 {
-                font-size: 2rem;
+            .hero h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <!-- Header -->
     <header>
         <div class="container">
-            <nav>
-                <a href="#" class="logo">Connect<span>Plus</span></a>
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#plans">Plans</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" class="btn">Sign Up</a></li>
-                </ul>
-            </nav>
+            <div class="logo">
+                <i class="fas fa-battery-full"></i>
+            </div>
+            <h1>Service Schimb Baterii iPhone</h1>
+            <p class="tagline">Schimb profesional baterie pentru TOATE modelele iPhone. Prețul include baterie + manoperă + garanție 12 luni. Lucrare rapidă, fără pierdere date.</p>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Premium Mobile Service for Your Connected Life</h1>
-                    <p>Experience blazing-fast 5G speeds, nationwide coverage, and unlimited data plans starting at just $29.99/month. No contracts, no hidden fees.</p>
-                    <div>
-                        <a href="#plans" class="btn">View Plans</a>
-                        <a href="#" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <!-- This would be an image in a real website -->
-                    <div style="font-size: 18rem; color: var(--primary); opacity: 0.7;">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                </div>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo-text">
+                <h2 style="color: #007AFF;"><i class="fas fa-mobile-alt"></i> iPhone Battery</h2>
             </div>
+            <ul class="nav-links">
+                <li><a href="#pricing"><i class="fas fa-tags"></i> Prețuri</a></li>
+                <li><a href="#info"><i class="fas fa-info-circle"></i> Informații</a></li>
+                <li><a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+            </ul>
+            <a href="tel:07XXXXXXXX" class="contact-header">
+                <i class="fas fa-phone"></i> Sună acum
+            </a>
         </div>
-    </section>
+    </nav>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Choose ConnectPlus?</h2>
-                <p>We provide the best mobile service with cutting-edge technology and customer-focused features.</p>
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>🔋 Baterie iPhone Slabă? Noi Rezolvăm!</h2>
+            <p>Oferim servicii profesionale de schimb baterie pentru toate modelele iPhone, de la iPhone X până la iPhone 16. Cu peste 7 ani experiență în domeniu, garantăm calitate, rapiditate și prețuri competitive.</p>
+            
+            <div class="highlight">
+                <h3><i class="fas fa-shield-alt"></i> Garanție 12 luni</h3>
+                <p>Toate intervențiile beneficiază de garanție 12 luni atât pe baterie, cât și pe manoperă. Suntem încrezători în calitatea serviciilor noastre.</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Lightning Fast 5G</h3>
-                    <p>Experience download speeds up to 1Gbps with our advanced 5G network coverage.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <h3>Nationwide Coverage</h3>
-                    <p>Stay connected wherever you go with our extensive nationwide network.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>24/7 Support</h3>
-                    <p>Our customer service team is available around the clock to assist you.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Secure & Reliable</h3>
-                    <p>Your data is protected with our state-of-the-art security measures.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Plans Section -->
-    <section class="plans" id="plans">
-        <div class="container">
-            <div class="section-title">
-                <h2>Flexible Mobile Plans</h2>
-                <p>Choose a plan that fits your needs. All plans include unlimited talk and text.</p>
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <h2 class="section-title"><i class="fas fa-money-bill-wave"></i> Listă Prețuri Complete</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">Prețul este FINAL (baterie + manoperă 150 Lei)</p>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Toate Modelele</button>
+                <button class="filter-btn" data-filter="fix">FixPremium</button>
+                <button class="filter-btn" data-filter="service">Service Pack</button>
             </div>
-            <div class="plans-grid">
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3>Basic</h3>
-                        <div class="plan-price">$29.99</div>
-                        <div class="plan-period">per month</div>
-                    </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> 10GB High-Speed Data</li>
-                            <li><i class="fas fa-check"></i> Unlimited Talk & Text</li>
-                            <li><i class="fas fa-check"></i> Mobile Hotspot 5GB</li>
-                            <li><i class="fas fa-check"></i> Standard Streaming</li>
-                            <li><i class="fas fa-times"></i> International Calling</li>
-                        </ul>
-                        <div class="plan-button">
-                            <a href="#" class="btn">Select Plan</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="plan-card popular">
-                    <div class="plan-popular">MOST POPULAR</div>
-                    <div class="plan-header">
-                        <h3>Plus</h3>
-                        <div class="plan-price">$49.99</div>
-                        <div class="plan-period">per month</div>
-                    </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> 50GB High-Speed Data</li>
-                            <li><i class="fas fa-check"></i> Unlimited Talk & Text</li>
-                            <li><i class="fas fa-check"></i> Mobile Hotspot 15GB</li>
-                            <li><i class="fas fa-check"></i> HD Streaming</li>
-                            <li><i class="fas fa-check"></i> International Calling</li>
-                        </ul>
-                        <div class="plan-button">
-                            <a href="#" class="btn btn-secondary">Select Plan</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3>Ultimate</h3>
-                        <div class="plan-price">$79.99</div>
-                        <div class="plan-period">per month</div>
-                    </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Unlimited High-Speed Data</li>
-                            <li><i class="fas fa-check"></i> Unlimited Talk & Text</li>
-                            <li><i class="fas fa-check"></i> Mobile Hotspot 50GB</li>
-                            <li><i class="fas fa-check"></i> 4K Streaming</li>
-                            <li><i class="fas fa-check"></i> Global Roaming</li>
-                        </ul>
-                        <div class="plan-button">
-                            <a href="#" class="btn">Select Plan</a>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="modelSearch" placeholder="Caută modelul tău (ex: iPhone 13 Pro)">
             </div>
-        </div>
-    </section>
+            
+            <div class="pricing-table">
+                <div class="table-header">
+                    <div>Model iPhone</div>
+                    <div>FixPremium Total</div>
+                    <div>Service Pack Total</div>
+                    <div>Disponibilitate</div>
+                </div>
+                
+                <!-- Pricing rows will be inserted here by JavaScript -->
+                <div id="pricingRows"></div>
+            </div>
+        </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Additional Services</h2>
-                <p>Enhance your mobile experience with our premium add-ons and services.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-image">
-                        <!-- This would be an image in a real website -->
-                        <div style="background-color: var(--primary); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
-                            <i class="fas fa-wifi"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3>Home Internet</h3>
-                        <p>Get high-speed home internet using our 5G network. No installation required.</p>
-                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">Learn More</a>
-                    </div>
+        <!-- Information Section -->
+        <section id="info" class="info-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Despre Piesele Noastre</h2>
+            
+            <div class="info-cards">
+                <div class="info-card fix">
+                    <h3><i class="fas fa-star"></i> FixPremium</h3>
+                    <p>Piesele de schimb marcate ca <strong>FixPremium</strong> sunt piese noi, neoriginale, fabricate de o terță parte, nu direct de către producătorul dispozitivului. Este vorba despre o calitate pe care o recomandăm cel mai mult și pentru care ne asumăm că este cât mai înaltă.</p>
+                    <p><strong>Bateriile FixPremium</strong> sunt realizate din <strong>Cobalt Pur</strong>. Aceste baterii oferă o stabilitate, siguranță și performanță superioare, comparabile cu bateriile originale. Rezistă la mai multe cicluri de încărcare și au o durată de viață mai lungă decât bateriile aftermarket standard.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-image">
-                        <!-- This would be an image in a real website -->
-                        <div style="background-color: var(--secondary); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3>Device Protection</h3>
-                        <p>Protect your device from damage, loss, or theft with our comprehensive plans.</p>
-                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">Learn More</a>
-                    </div>
+                
+                <div class="info-card service">
+                    <h3><i class="fas fa-crown"></i> Service Pack</h3>
+                    <p>Acestea sunt piese noi, originale, direct de la producător/furnizor autorizat, de cea mai înaltă calitate. Se fabrică folosind aceleași procese și materiale ca piesele originale Apple.</p>
+                    <p><em>Potrivite pentru clienții care preferă doar versiunea originală.</em></p>
+                    <p class="note"><strong>Notă importantă:</strong> Piesele de schimb marcate ca Service Pack nu au fost supuse autorizării finale de către Apple și, prin urmare, numerele lor de serie nu sunt valabile. Din acest motiv, piesele de schimb nu pot fi considerate pe deplin compatibile cu programul Apple Independent Repair Provider (IRP).</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-image">
-                        <!-- This would be an image in a real website -->
-                        <div style="background-color: var(--dark); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
-                            <i class="fas fa-tv"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3>Streaming Services</h3>
-                        <p>Bundle popular streaming services with your mobile plan at a discounted rate.</p>
-                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">Learn More</a>
-                    </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-wrench"></i> Despre Serviciul Nostru</h3>
+                    <p><strong>Manopera</strong> este de <strong>150 Lei</strong> pentru toate modelele și este inclusă în prețul afișat.</p>
+                    <p><strong>Timp de intervenție:</strong> ~45-60 minute (în funcție de model).</p>
+                    <p><strong>Ce include serviciul:</strong></p>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Schimbarea bateriei</li>
+                        <li>Testarea funcționalității telefonului</li>
+                        <li>Curățarea interiorului telefonului</li>
+                        <li>Verificarea etanșeității (unde este cazul)</li>
+                        <li>Garanție 12 luni</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
-                    <h3>ConnectPlus</h3>
-                    <p>Providing reliable mobile services with cutting-edge technology and exceptional customer support since 2010.</p>
-                    <div style="margin-top: 20px;">
-                        <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
-                        <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
-                        <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
-                        <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>07XX XXX XXX</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@serviceiphone.ro</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Strada Exemplu, Nr. 10, Orașul Tău</span>
                     </div>
                 </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#plans">Plans</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
+                
+                <div class="footer-section">
+                    <h3>Program</h3>
+                    <p><strong>Luni - Vineri:</strong> 9:00 - 18:00</p>
+                    <p><strong>Sâmbătă:</strong> 10:00 - 14:00</p>
+                    <p><strong>Duminică:</strong> Închis</p>
+                    <p>Programări și în afara programului, la cerere.</p>
                 </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Mobile Plans</a></li>
-                        <li><a href="#">Home Internet</a></li>
-                        <li><a href="#">International Roaming</a></li>
-                        <li><a href="#">Device Protection</a></li>
-                        <li><a href="#">Streaming Bundles</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Mobile Street, Tech City</li>
-                        <li><i class="fas fa-phone"></i> 1-800-CONNECT</li>
-                        <li><i class="fas fa-envelope"></i> info@connectplus.com</li>
-                        <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-10PM, Sat-Sun: 9AM-8PM</li>
-                    </ul>
+                
+                <div class="footer-section">
+                    <h3>Link-uri Rapide</h3>
+                    <a href="#pricing">Listă Prețuri</a>
+                    <a href="#info">Despre Piese</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#" onclick="alert('Trimiteți un mesaj pe WhatsApp la 07XX XXX XXX')">WhatsApp</a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 ConnectPlus Mobile Services. All rights reserved. | <a href="#" style="color: #bbb;">Privacy Policy</a> | <a href="#" style="color: #bbb;">Terms of Service</a></p>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Service Schimb Baterii iPhone. Toate drepturile rezervate.</p>
+                <p style="margin-top: 0.5rem;">Website creat pentru afacerea ta.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        // Pricing data
+        const pricingData = [
+            { model: "iPhone X", fixPrice: "208 Lei", servicePrice: "278 Lei", available: "În stoc" },
+            { model: "iPhone XS", fixPrice: "227 Lei", servicePrice: "311 Lei", available: "În stoc" },
+            { model: "iPhone XS Max", fixPrice: "-", servicePrice: "311 Lei", available: "În stoc" },
+            { model: "iPhone XR", fixPrice: "208 Lei", servicePrice: "278 Lei", available: "În stoc" },
+            { model: "iPhone 11", fixPrice: "204 Lei", servicePrice: "336 Lei", available: "În stoc" },
+            { model: "iPhone 11 Pro", fixPrice: "234 Lei", servicePrice: "330 Lei", available: "În stoc" },
+            { model: "iPhone 11 Pro Max", fixPrice: "-", servicePrice: "343 Lei", available: "În stoc" },
+            { model: "iPhone 12", fixPrice: "208 Lei", servicePrice: "330 Lei", available: "În stoc" },
+            { model: "iPhone 12 Pro", fixPrice: "208 Lei", servicePrice: "330 Lei", available: "În stoc" },
+            { model: "iPhone 12 Pro Max", fixPrice: "234 Lei", servicePrice: "343 Lei", available: "În stoc" },
+            { model: "iPhone 12 Mini", fixPrice: "204 Lei", servicePrice: "278 Lei", available: "În stoc" },
+            { model: "iPhone 13", fixPrice: "211 Lei", servicePrice: "343 Lei", available: "În stoc" },
+            { model: "iPhone 13 Pro", fixPrice: "244 Lei", servicePrice: "343 Lei", available: "În stoc" },
+            { model: "iPhone 13 Pro Max", fixPrice: "246 Lei", servicePrice: "343 Lei", available: "În stoc" },
+            { model: "iPhone 13 Mini", fixPrice: "215 Lei", servicePrice: "311 Lei", available: "În stoc" },
+            { model: "iPhone 14", fixPrice: "221 Lei", servicePrice: "343 Lei", available: "În stoc" },
+            { model: "iPhone 14 Pro", fixPrice: "246 Lei", servicePrice: "355 Lei", available: "În stoc" },
+            { model: "iPhone 14 Pro Max", fixPrice: "269 Lei", servicePrice: "388 Lei", available: "În stoc" },
+            { model: "iPhone 14 Plus", fixPrice: "240 Lei", servicePrice: "362 Lei", available: "În stoc" },
+            { model: "iPhone 15", fixPrice: "236 Lei", servicePrice: "376 Lei", available: "În stoc" },
+            { model: "iPhone 15 Pro", fixPrice: "253 Lei", servicePrice: "362 Lei", available: "În stoc" },
+            { model: "iPhone 15 Pro Max", fixPrice: "305 Lei", servicePrice: "407 Lei", available: "În stoc" },
+            { model: "iPhone 15 Plus", fixPrice: "278 Lei", servicePrice: "536 Lei", available: "În stoc" },
+            { model: "iPhone 16", fixPrice: "265 Lei", servicePrice: "504 Lei", available: "În stoc" },
+            { model: "iPhone 16 Pro", fixPrice: "292 Lei", servicePrice: "504 Lei", available: "În stoc" },
+            { model: "iPhone 16 Pro Max", fixPrice: "298 Lei", servicePrice: "665 Lei", available: "În stoc" },
+            { model: "iPhone 16 Plus", fixPrice: "284 Lei", servicePrice: "536 Lei", available: "În stoc" }
+        ];
+
+        // Render pricing table
+        function renderPricingTable(filter = "all", searchTerm = "") {
+            const container = document.getElementById('pricingRows');
+            container.innerHTML = '';
+            
+            const filteredData = pricingData.filter(item => {
+                const matchesFilter = filter === "all" || 
+                    (filter === "fix" && item.fixPrice !== "-") || 
+                    (filter === "service" && item.servicePrice !== "-");
+                
+                const matchesSearch = searchTerm === "" || 
+                    item.model.toLowerCase().includes(searchTerm.toLowerCase());
+                
+                return matchesFilter && matchesSearch;
             });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+            
+            if (filteredData.length === 0) {
+                container.innerHTML = `<div class="table-row" style="text-align: center; grid-template-columns: 1fr;">
+                    <div>Nu s-au găsit modele care să corespundă căutării.</div>
+                </div>`;
+                return;
+            }
+            
+            filteredData.forEach(item => {
+                const row = document.createElement('div');
+                row.className = 'table-row';
                 
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
+                row.innerHTML = `
+                    <div class="model-name">${item.model}</div>
+                    <div class="price">${item.fixPrice}</div>
+                    <div class="price">${item.servicePrice}</div>
+                    <div>
+                        <span style="color: #34C759; font-weight: 600;">${item.available}</span>
+                        ${item.fixPrice !== "-" ? '<span class="badge fix">FixPremium</span>' : ''}
+                        ${item.servicePrice !== "-" ? '<span class="badge service">Service Pack</span>' : ''}
+                    </div>
+                `;
                 
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
+                container.appendChild(row);
+            });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Render initial table
+            renderPricingTable();
+            
+            // Filter buttons
+            document.querySelectorAll('.filter-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    const searchTerm = document.getElementById('modelSearch').value;
+                    renderPricingTable(filter, searchTerm);
+                });
+            });
+            
+            // Search functionality
+            document.getElementById('modelSearch').addEventListener('input', (e) => {
+                const searchTerm = e.target.value;
+                const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+                renderPricingTable(activeFilter, searchTerm);
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Make phone number clickable
+            document.querySelectorAll('.contact-header, .contact-info').forEach(el => {
+                if(el.textContent.includes('07XX')) {
+                    el.addEventListener('click', () => {
+                        alert('Apelați 07XX XXX XXX pentru programare');
                     });
                 }
             });
         });
-        
-        // Simple form validation for newsletter signup
-        const newsletterForm = document.querySelector('.newsletter-form');
-        if(newsletterForm) {
-            newsletterForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const email = this.querySelector('input[type="email"]').value;
-                
-                if(email && email.includes('@')) {
-                    alert('Thank you for subscribing to our newsletter!');
-                    this.reset();
-                } else {
-                    alert('Please enter a valid email address.');
-                }
-            });
-        }
     </script>
 </body>
 </html>
